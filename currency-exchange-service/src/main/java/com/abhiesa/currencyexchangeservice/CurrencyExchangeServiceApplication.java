@@ -20,19 +20,19 @@ public class CurrencyExchangeServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CurrencyExchangeServiceApplication.class, args);
 	}
-	
-	@Bean 
-	public AlwaysSampler defaultSampler(){ 
-	    return new AlwaysSampler(); 
-	} 
-	
+
 	@Bean
-    public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)  
-          .select()                                  
-          .apis(RequestHandlerSelectors.any())              
-          .paths(PathSelectors.any())                          
-          .build();                                           
+	public AlwaysSampler defaultSampler(){
+	    return new AlwaysSampler();
+	}
+
+	@Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+          .select()
+          .apis(RequestHandlerSelectors.basePackage("com.abhiesa.currencyexchangeservice"))
+          .paths(PathSelectors.any())
+          .build();
     }
 
 }

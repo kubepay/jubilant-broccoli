@@ -19,6 +19,8 @@ public class CurrencyExchangeController {
 	@Autowired
 	private ExchangeValueRepository repository;
 
+	//http://localhost:8000/swagger-ui.html
+	//http://localhost:8000/currency-exchange/from/USD/to/INR
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to) {
 

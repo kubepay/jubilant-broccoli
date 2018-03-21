@@ -58,6 +58,7 @@
 	</dependencyManagement>
 
 	<build>
+	  <finalName>zipkin-distributed-tracing-server</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
